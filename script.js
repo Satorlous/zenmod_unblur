@@ -12,8 +12,12 @@
 // ==/UserScript==
 
 (function() {
-    let jijaBlocks = document.querySelectorAll('.has_nicotine');
-    for(let i = 0; i < jijaBlocks.length; i++) {
-        jijaBlocks[i].classList.remove("has_nicotine");
+    removeBlur();
+    function removeBlur() {
+        let jijaBlocks = document.querySelectorAll('.has_nicotine');
+        for(let i = 0; i < jijaBlocks.length; i++) {
+            jijaBlocks[i].classList.remove("has_nicotine");
+        }
     }
+    setInterval(removeBlur, 1000);
 })();
